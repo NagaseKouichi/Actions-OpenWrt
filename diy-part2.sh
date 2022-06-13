@@ -55,6 +55,12 @@ git clone https://NagaseKouichi:SECRET_PASSWORD@github.com/NagaseKouichi/luci-ap
 git clone https://NagaseKouichi:SECRET_PASSWORD@github.com/NagaseKouichi/mosdns-cn-openwrt.git package/mosdns-cn
 git clone https://NagaseKouichi:SECRET_PASSWORD@github.com/NagaseKouichi/luci-app-mosdns-cn.git package/luci-app-mosdns-cn
 
+# 增加dnsproxy
+pushd feeds/packages/net
+rm -fr dnsproxy && git clone https://github.com/NagaseKouichi/dnsproxy-openwrt.git dnsproxy
+popd
+git clone https://github.com/NagaseKouichi/luci-app-dnsproxy.git package/luci-app-dnsproxy
+
 # 增加DirtyDNS
 git clone https://github.com/NagaseKouichi/luci-app-dirtydns.git package/luci-app-dirtydns
 
